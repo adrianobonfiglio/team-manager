@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	{{> header}}
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        {{> nav}}
+
+
+        <div id="page-wrapper">
+            <h2>Tarefas da Sprint</h2>
+			<table  class="table">
+				<thead>
+					<th>Número</th>
+					<th>Projeto</th>
+					<th>Tipo</th>
+					<th>Situação</th>
+					<th>Título</th>
+					<th>Prioridade</th>
+					<th>Tempo Estimado</th>
+                    <th>Tempo Gasto</th>
+                    <th>Chamado / Serviço</th>
+				</thead>
+				<tbody>
+					{{#each list}}
+						<tr>
+							<td>{{id}}</td>
+							<td>{{projectName}}</td>
+							<td>{{trackerName}}</td>
+							<td>{{statusName}}</td>
+							<td>{{subject}}</td>
+							<td>{{priorityName}}</td>
+							<td>{{estimatedHours}}</td>
+                            <td>{{spentHours}}</td>
+                            <td>{{numeroSolicitacao}}</td>
+                            <td><a class="btn btn-primary" href="">Lançar horas</a>
+						</tr>
+					{{/each}}
+				</tbody>
+			</table>
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+
+</body>
+
+</html>

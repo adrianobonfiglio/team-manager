@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	{{> header}}
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        {{> nav}}
+
+        <div id="page-wrapper">
+            <h2>Dashboard</h2>
+            <div class="row">
+                {{#each list}}
+                <div class="col-lg-5">
+                         <div class="well profile">
+                            <div class="col-sm-12">
+                                <div class="col-xs-12 col-sm-8">
+                                    <h2>{{nome}}</h2>
+                                    <p><strong>Tarefas: </strong> {{issues}} </p>
+                                    <p><strong>Tarefas Fechadas: </strong> {{closedIssues}} </p>
+                                    <p><strong>Homologação: </strong> {{homologIssues}} </p>
+                                    <p><strong>Demanda/Melhorias: </strong> {{demandaIssues}} </p>
+                                    <p><strong>Defeito: </strong> {{defeitoIssues}} </p>
+                                </div>  
+                            </div>            
+                                <div class="col-xs-12 col-sm-4 emphasis">
+                                    <h2><strong> {{estimatedHours}} </strong></h2>                    
+                                    <p><small>Horas Estimadas</small></p>
+                                </div>
+                                <div class="col-xs-12 col-sm-4 emphasis">
+                                    <h2><strong> {{timeEntries}} </strong></h2>                    
+                                    <p><small>Horas Implementadas</small></p>
+                                </div>
+                                <div class="col-xs-12 col-sm-4 emphasis">
+                                    <h2><strong> {{reworkHours}} </strong></h2>                    
+                                    <p><small>Horas Retrabalho</small></p>
+                                </div>
+                         </div> 
+                </div>
+                {{/each}}                
+            </div>
+
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	{{> header}}
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        {{> nav}}
+
+
+        <div id="page-wrapper">
+            <h2>Acompanhamento</h2>
+            <h3>Defeitos</h3>
+			<table  class="table">
+				<thead>
+					<th>Tipo</th>
+					<th>Quantidade</th>
+				<tbody>
+					{{#each defeitos}}
+						<tr>
+							<td>{{defeitos}}</td>
+							<td>{{value}}</td>                                                  
+						</tr>
+					{{/each}}
+				</tbody>
+			</table>
+            <h3>Retrabalhos</h3>
+			<table  class="table">
+				<thead>
+					<th>Tipo</th>
+					<th>Quantidade</th>
+				<tbody>
+					{{#each retrabalhos}}
+						<tr>
+							<td>{{key}}</td>
+							<td>{{value}}</td>                                                  
+						</tr>
+					{{/each}}
+				</tbody>
+			</table>			
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+
+</body>
+
+</html>

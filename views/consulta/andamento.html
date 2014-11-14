@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	{{> header}}
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        {{> nav}}
+
+
+        <div id="page-wrapper">
+            <h2>Acompanhamento</h2>
+			<table  class="table">
+				<thead>
+					<th>Número</th>
+					<th>Projeto</th>
+					<th>Tipo</th>
+					<th>Título</th>
+					<th>Tempo Estimado</th>
+                    <th>Desenvolvedor</th>
+                    <th>Status</th>
+				</thead>
+				<tbody>
+					{{#each list}}
+						<tr>
+							<td>{{id}}</td>
+							<td>{{projectName}}</td>
+							<td>{{trackerName}}</td>
+							<td>{{subject}}</td>
+							<td>{{estimatedHours}}</td>
+                            <td>{{changedBy}}</td>
+                            <td>{{statusHelper late}}</td>                                                   
+						</tr>
+					{{/each}}
+				</tbody>
+			</table>
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+
+</body>
+
+</html>
